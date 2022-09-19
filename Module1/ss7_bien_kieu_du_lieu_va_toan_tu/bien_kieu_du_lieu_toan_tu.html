@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>biến kiểu dữ liệu và toán tử </title>
+</head>
+<body>
+<script>
+    /* Điểm trung bình: */
+    let inputPhysics = prompt("scores 1");
+    let inputChemistry = prompt("scores 2");
+    let inputBiological = prompt("scores 3");
+    let physics = parseInt(inputPhysics);
+    let chemistry = parseInt(inputChemistry);
+    let biological = parseInt(inputBiological);
+    let total = physics + chemistry + biological;
+    let average = total/3;
+    document.write("Điểm trung bình: " + average);
+</script>
+<br><br>
+
+<script>
+    /* 0C và 0F : */
+    let input0c = prompt("Celsius 0C");
+    let c = parseInt(input0c);
+    let result = c/5*9+32;
+    document.write("Kết quả 0F là :" + result);
+</script>
+<br><br>
+
+<script>
+    /* Diện tích hình tròn: */
+    let inputR = prompt("bán kính");
+    let PI = 3.14;
+    let R = parseInt(inputR);
+    let S = R*R*PI;
+    let P = 2*R*PI
+    document.write("Diện tích hình tròn:" +S);
+    document.write("Chu vi hình tròn" +P )
+</script>
+
+</body>
+</html>

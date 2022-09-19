@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<h3> Calculator</h3>
+<form method="calculator">
+    <input type="text" id="number1">
+    <input type="text" id="number2"><br><br>
+    <button type="button" id="cong" onclick="PhepCong()">Addition(+)</button>
+    <button type="button" id="tru" onclick="PhepTru()">Subtraction(-)</button>
+    <button type="button" id="nhan" onclick="PhepNhan()">Multiplication(x)</button>
+    <button type="button" id="chia" onclick="PhepChia()">Division(/)</button>
+    <p id="KetQua"> </p>
+</form>
+<script>
+    function PhepCong() {
+        let n1 = +document.getElementById("number1").value;
+        let n2 = +document.getElementById("number2").value;
+        let cong = n1 + n2;
+        document.getElementById("KetQua").innerText = "Result Addition: " + cong;
+    }
+
+    function PhepTru() {
+        let n1 = +document.getElementById("number1").value;
+        let n2 = +document.getElementById("number2").value;
+        let tru = n1 - n2;
+        document.getElementById("KetQua").innerText = "Result Subtraction: " + tru;
+    }
+
+    function PhepNhan() {
+        let n1 = +document.getElementById("number1").value;
+        let n2 = +document.getElementById("number2").value;
+        let nhan = n1 * n2;
+        document.getElementById("KetQua").innerText = "Result Multiplication: " + nhan;
+    }
+
+    function PhepChia() {
+        let n1 = +document.getElementById("number1").value;
+        let n2 = +document.getElementById("number2").value;
+        let chia = n1 / n2;
+        document.getElementById("KetQua").innerText = "Result Division: " + chia;
+
+    }
+</script>
+</body>
+</html>
