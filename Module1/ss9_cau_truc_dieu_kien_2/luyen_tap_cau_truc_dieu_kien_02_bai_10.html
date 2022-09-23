@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dk2_Bai10</title>
+</head>
+<body>
+<script>
+    let money = 0;
+    let chudien = +prompt("Nhập chữ điện:");
+    if (chudien > 40){
+        money = chudien * 40;
+    }else if (chudien > 30){
+        money = chudien * 30;
+    }else if (chudien > 20){
+        money = chudien *20;
+    }else {
+        money = chudien * 10;
+    }
+    document.write("gia tien dien cua ban la: " + money);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dk2_bai7</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhap vao gia tri a")
+    let b = +prompt("nhap vao gia tri b")
+    let c = +prompt("nhap vao gia tri c")
+    delta=b*b-4*a*c
+    if (delta > 0){
+        alert("Phương trình có 2 nghiệm phân biệt đó là: x1 = "+ ((-b - Math.sqrt(delta)) /(2*a)));
+        alert("Và x2 = " + ((-b + Math.sqrt(delta)) /(2*a)));
+    }else if (delta == 0){
+        alert("Phương trình có 1 nghiem kep là x1 = x2 = " + (-b) / (2 * a));
+    }else{
+        alert("Phương trình vô nghiệm");
+    }
+</script>
+</body>
+</html>

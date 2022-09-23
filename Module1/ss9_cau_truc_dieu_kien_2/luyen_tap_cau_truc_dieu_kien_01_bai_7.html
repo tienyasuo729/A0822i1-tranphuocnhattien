@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dk1_bai7</title>
+</head>
+<body>
+<script>
+    let phut=+prompt("số phút đã gọi là:")
+    const   phicodinh=10;
+    let phi
+    if(phut>200){
+        phi= (phut-200)*200+150*400+50*600;
+        tong=0.01*phi+phicodinh;
+        document.write("số tiền cước phải trả là:"+tong)
+    }else if(phut>50) {
+        phi = (phut - 50) * 400 + 50 * 600;
+        tong=0.01*phi+phicodinh;
+        document.write("số tiền cước phải trả là:"+tong)
+    }else {
+        phi = phut * 600;
+        tong = 0.01 * phi + phicodinh;
+        document.write("số tiền cước phải trả là:" + tong)
+    }
+</script>
+</body>
+</html>
