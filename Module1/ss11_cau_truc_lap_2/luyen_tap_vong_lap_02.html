@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Bài 1: In dãy Finonaci</h3>
+<button onclick="bai1()">Giải bài 1</button>
+<h3>Bài 2: Tính giai thừa của một số nguyên dương</h3>
+<button onclick="bai2()">Giải bài 2</button>
+<h3>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</h3>
+<button onclick="bai3()">Giải bài 3</button>
+<h3>Bài 4: In hình chữ nhật</h3>
+<button onclick="bai4()">Giải bài 4</button>
+<h3>Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi
+    xuất hàng tháng.</h3>
+<button onclick="bai5()">Giải bài 5</button>
+<h3>Bài 6: In hình trái tim</h3>
+<button onclick="bai6()">Giải bài 6</button>
+
+<script>
+    function bai1() {
+        let fibonacci;
+        let n1 = 0;
+        let n2 = 1;
+        count = 0;
+        while (count < 100) {
+            document.write(n1 + "<br>");
+            fibonacci = n1 + n2;
+            n1 = n2;
+            n2 = fibonacci;
+            count++;
+        }
+    }
+
+    function bai2() {
+        let s = 1;
+        let n = +prompt("Nhập vào số giai thừa cần tính : ");
+        if (n == 0) {
+            document.write(n + "!=" + 1)
+        } else {
+            for (let i = 1; i <= n; i++) {
+                s *= i;
+            }
+            document.write(n + "!=" + s)
+        }
+
+    }
+
+    function bai3() {
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j <= i; j++) {
+                document.write("*")
+            }
+            document.write("<br/>")
+        }
+        document.write("<br/>")
+        document.write("<br/>")
+        for (let a = 5; a > 0; a--) {
+            for (let b = 0; b < a; b++) {
+                document.write("*")
+            }
+            document.write("<br/>")
+        }
+        document.write("<br/>")
+        document.write("<br/>")
+        for (let c = 5; c > 0; c--) {
+            for (let d = 1; d < c; d++) {
+                document.write("&nbsp&nbsp")
+            }
+            for (let f = 5 - c; f >= 0; f--) {
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        document.write("<br/>")
+        document.write("<br/>")
+        for (let x = 5; x > 0; x--) {
+            for (let y = 5 - x; y > 0; y--) {
+                document.write("&nbsp&nbsp")
+            }
+            for (let z = 1; z <= x; z++) {
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+
+
+    }
+
+    function bai4() {
+        for (let i = 1; i <= 7; i++) {
+            for (let j = 1; j <= 20; j++) {
+                if (i == 1 || i == 7) {
+                    document.write("*");
+                } else {
+                    if (j == 1 || j == 20) {
+                        document.write("*");
+                    } else {
+                        document.write("&nbsp&nbsp")
+                    }
+                }
+            }
+            document.write("<br>");
+        }
+    }
+
+    function bai5() {
+        let money = +prompt("Nhập vào số tiền ban đầu :");
+        let month = +prompt("Nhập vào số tháng cho vay :");
+        let rate = +prompt("Nhập vào lãi xuất hàng tháng :");
+        alert("Lãi ngân hàng là : " + (money * (1 + rate) ^ month));
+    }
+
+    function bai6() {
+
+    }
+
+
+</script>
+</body>
+</html>

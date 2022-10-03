@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</h3>
+<button onclick="bai1()">Giải bài 1</button>
+<h3>Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập.
+    Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.</h3>
+<button onclick="bai2()">Giải bài 2</button>
+<h3>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</h3>
+<button onclick="bai3()">Giải bài 3</button>
+<h3>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</h3>
+<button onclick="bai4()">Giải bài 4</button>
+<h3>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.</h3>
+<button onclick="bai5()">Giải bài 5</button>
+<h3>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</h3>
+<button onclick="bai6()">Giải bài 6</button>
+<h3>Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz",
+    5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</h3>
+<button onclick="bai7()">Giải bài 7</button>
+<h3>Bài 8: Game đoán số</h3>
+<button onclick="bai8()">Giải bài 8</button>
+<script>
+    function bai1() {
+        for (let i = 1; i < 100; i++) {
+            document.write(i + " ");
+            if (i === 99) {
+                alert("Đã hoàn thành");
+            }
+        }
+    }
+
+    function bai2() {
+        let temperature = +prompt("Nhập nhiệt độ hiện tại: ");
+        if (temperature >= 100) {
+            document.write("Yêu cầu tăng nhiệt độ : ");
+        } else if (temperature <= 20) {
+            document.write("Yêu cầu giảm nhiệt độ : ");
+        } else {
+            document.write("Cân bằng nhiệt độ!!!");
+        }
+    }
+
+    function bai3() {
+        let a = 1, b = 0, temp;
+        let num = 20;
+        while (num > 0) {
+            document.write(b + " ");
+            temp = a;
+            a += b;
+            b = temp;
+            num--;
+        }
+    }
+
+    function bai4() {
+        let a = 1, b = 0, temp;
+        while (true) {
+            if (b % 5 == 0) {
+                document.write(b + " ");
+                break;
+            }
+            temp = a;
+            a += b;
+            b = temp;
+        }
+    }
+
+    function bai5() {
+        let a = 1, b = 0, temp;
+        let num = 20;
+        let sum = 0
+        while (num > 0) {
+            // document.write(b + " ");
+            sum += b;
+            temp = a;
+            a += b;
+            b = temp;
+            num--;
+        }
+        document.write(sum + "");
+    }
+
+    function bai6() {
+        let n = 30, number = 0, sum = 0;
+        while (n > 0) {
+            if (number % 7 == 0) {
+                //document.write(number+" ");
+                sum += number;
+            }
+            n--;
+            number += 7;
+        }
+        document.write(sum+"");
+    }
+
+    function bai7() {
+        for (let i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                document.write("FizzBuzz" + " ");
+                continue;
+            } else if (i % 3 == 0) {
+                document.write("Fizz" + " ");
+                continue;
+            } else if (i % 5 == 0) {
+                document.write("Buzz" + " ");
+                continue;
+            }
+            document.write(i + " ");
+        }
+    }
+    function bai8() {
+
+    }
+</script>
+</body>
+</html>

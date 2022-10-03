@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = +prompt("nhập vào số lượng số nguyên tố in ra");
+    let n = 2;
+    if (numbers <= 0) {
+        alert("vui lòng nhập số dương lớn hơn không");
+    } else {
+        let count = 0;
+        while (true) {
+            let primeNumber = true; // đúng là số nguyên tố
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    primeNumber = false;
+                    break;
+                }
+            }
+            if (primeNumber == true) {
+                count++;
+                document.write(n + '<br>');
+            }
+            if (count >= numbers) {
+                break;
+            }
+            n++;
+        }
+    }
+</script>
+</body>
+</html>
