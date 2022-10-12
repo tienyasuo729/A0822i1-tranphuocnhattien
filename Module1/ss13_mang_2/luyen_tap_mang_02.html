@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="ex1()">Bài 1</button>
+<button onclick="ex2()">Bài 2</button>
+<button onclick="ex3()">Bài 3</button>
+<button onclick="ex4()">Bài 4</button>
+<button onclick="ex5()">Bài 5</button>
+<button onclick="ex6()">Bài 6</button>
+<script>
+    function ex1() {
+        let row = +prompt("Nhap so hang: ");
+        let col = +prompt("Nhap so cot: ");
+        let arr = Array(row);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = Array(col);
+            for (let j = 0; j < arr[i].length; j++) {
+                arr[i][j] = prompt("Nhap phan tu hang " + i + " co gia tri " + j + ": ");
+            }
+        }
+        for (let i in arr) {
+            document.write("row " + i + " " + '<br>');
+            for (let j in arr[i]) {
+                document.write(" " + arr[i][j]);
+                document.write('<br>');
+            }
+        }
+    }
+
+    function ex2() {
+        let arr = [];
+        for (let i = 0; i < 10; i++) {
+            arr[i] = prompt("Nhap gia tri mang: ");
+        }
+        document.write("Mang in nguoc: ");
+        for (let i = arr.length - 1; i >= 0; i--) {
+            document.write(arr[i]);
+        }
+    }
+
+    //Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+    // function ex3() {
+        // let arr = [1, 2, 20, 100, "g", "f", "c"];
+        // let count = 0;
+        // for (let i = 0; i < 5; i++) {
+        //     arr[i] = prompt("Nhap gia tri mang: ");
+        // }
+        // for (let i = 0; i < arr.length; i++) {
+        //     console.log(Number(arr.charAt(i)));
+        //     console.log(typeof Number("abcdef"));
+        //     if (typeof (arr.charAt(i) + 0) == "string") {
+        //         continue;
+        //     } else {
+        //         count++;
+        //     }
+        // }
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (arr[i] >= 0 && arr[i] < 10) {
+    //             count++;
+    //         }
+    //     }
+    //     document.write(count + '');
+    // }
+
+    function ex4() {
+        let string = prompt("Nhap chuoi ki tu: ");
+        let count = 1;
+        if (string[0] === " ") {
+            for (let i = 1; i < string.length; i++) {
+                if (string[i] === " ") {
+                    count++;
+                }
+            }
+        } else {
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] === " ") {
+                    count++;
+                }
+            }
+        }
+        document.write(count + '');
+    }
+
+    function ex5() {
+
+        let string1 = prompt("Nhap chuoi thu 1: ");
+        let string2 = prompt("Nhap chuoi thu 2: ");
+        let check = true;
+        if (string1.length === string2.length) {
+            for (let i = 0; i < string1.length; i++) {
+                if (string1[i] !== string2[i]) {
+                    check = false;
+                }
+            }
+            if (check === true) {
+                document.write("Hai chuoi giong nhau");
+            }
+        } else {
+            document.write("Hai chuoi khac nhau")
+        }
+
+    }
+
+    function ex6() {
+        let str = [];
+        for (let i = 0; i < 5; i++) {
+            str[i] = prompt("Nhap data: ");
+        }
+        // for (let i = 0; i < 5; i++) {
+        //     if (str.charAt[i] === '-') {
+        //         str[i] = '_';
+        //     }
+        // }
+        for (let i = 0; i < 5; i++) {
+            document.write(str[i]);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="ex1()">Bài 1</button>
+<button onclick="ex2()">Bài 2</button>
+<button onclick="ex3()">Bài 3</button>
+<button onclick="ex4()">Bài 4</button>
+<button onclick="ex5()">Bài 5</button>
+<button onclick="ex6()">Bài 6</button>
+<button onclick="ex7()">Bài 7</button>
+<button onclick="ex8()">Bài 8</button>
+<button onclick="ex9()">Bài 9</button>
+<script>
+    //khởi tạo một mảng số nguyên gồm 10 ptu. thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10
+    function ex1() {
+        let arr = Array();
+        for (let i = 0; i < 10; i++) {
+            arr[i] = prompt("Nhap phan tu thu " + i + ": ");
+        }
+        let count = 0;
+        for (let i = 0; i < 10; i++) {
+            if (arr[i] >= 10) {
+                count++;
+            }
+        }
+        document.write("So phan tu lon hon hoac bang 10: " + count);
+    }
+
+    //Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó
+    function ex2() {
+        let arr = Array();
+        for (let i = 0; i < 10; i++) {
+            arr[i] = prompt("Nhap phan tu thu " + i + ": ");
+        }
+        let maxValue = arr[0];
+        let index;
+        for (let i = 0; i < 10; i++) {
+            if (arr[i] > maxValue) {
+                maxValue = arr[i];
+                index = i;
+            }
+        }
+        document.write("Gia tri lon nhat: " + maxValue + "nam o vi tri " + index);
+    }
+
+    //Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.
+    function ex3() {
+        let amount = prompt("Nhap so luong phan tu: ");
+        let arr = Array();
+        for (let i = 0; i < amount; i++) {
+            arr[i] = prompt("Nhap phan tu thu " + i + ": ");
+        }
+        let maxValue = a[0];
+        let sum = 0;
+        for (let i = 0; i < 10; i++) {
+            if (arr[i] > maxValue) {
+                maxValue = arr[i];
+            }
+        }
+        for (let i = 0; i < amount; i++) {
+            sum += arr[i];
+        }
+        document.write("Gia tri lon nhat: " + maxValue + ", gia tri trung binh: " + (sum / amount));
+    }
+
+    //Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+    function ex4() {
+        let amount = prompt("Nhap so luong phan tu: ");
+        let arr = Array();
+        for (let i = 0; i < amount; i++) {
+            arr[i] = prompt("Nhap phan tu thu " + i + ": ");
+        }
+        for (let i = 0; i < arr.length / 2; i++) {
+            let temp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = temp;
+        }
+        document.write(arr + '');
+    }
+
+    //Viết chương trình đếm số nguyên âm trong một chuỗi
+    function ex5() {
+        let amount = prompt("Nhap so luong phan tu: ");
+        let arr = Array();
+        for (let i = 0; i < amount; i++) {
+            arr[i] = prompt("Nhap phan tu thu " + i + ": ");
+        }
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                count++;
+            }
+        }
+        document.write(count + "");
+    }
+
+    //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array
+    function ex6() {
+        let arr = Array();
+        for (let i = 0; i < 5; i++) {
+            arr[i] = prompt("Nhap phan tu thu " + i + ": ");
+        }
+        let number = +prompt("Nhap so nguyen: ");
+        let check = false;
+        for (let i = 0; i < 10; i++) {
+            if (number === arr[i]) {
+                check = true;
+            }
+        }
+        if (check == true) {
+            document.write(number + " is in the array");
+        } else {
+            document.write(number + " is not in the array");
+        }
+    }
+
+    //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+    function ex7() {
+        //let amount = prompt("Nhap so luong phan tu: ");
+        let arr = Array();
+        for (let i = 0; i < 5; i++) {
+            arr[i] = prompt("Nhap phan tu thu " + i + ": ");
+        }
+        let number = +prompt("Nhap so nguyen: ");
+        for (let i = 0; i < arr.length; i++) {
+            if (number == arr[i]) {
+                for (let j = i; j < arr.length - 1; j++) {
+                    arr[j] = arr[j + 1];
+                }
+                i--;
+            }
+        }
+        arr[arr.length - 1] = 0;
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + "&nbsp");
+        }
+    }
+
+    //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp
+    function ex8() {
+        let amount = prompt("Nhap so luong phan tu: ");
+        let arr = Array();
+        for (let i = 0; i < amount; i++) {
+            arr[i] = prompt("Nhap phan tu thu " + i + ": ");
+        }
+        for (let i = 0; i < arr.length; i++) {
+            let max_index = i;
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[j] > arr[max_index]) {
+                    max_index = j;
+                }
+            }
+            if (max_index !== i) {
+                let temp = arr[i];
+                arr[i] = arr[max_index];
+                arr[max_index] = temp;
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + "&nbsp;");
+        }
+    }
+
+    //Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.
+    function ex9() {
+        let arrA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let arrB = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+        let arrC = [];
+        let index = 0;
+        for (let i = 0; i < arrA.length; i++) {
+            arrC[index] = arrA[i];
+            index++;
+        }
+        console.log(index);
+        for (let i = 0; i < arrB.length; i++) {
+            arrC[index] = arrB[i];
+            index++;
+        }
+        for (let i = 0; i < 20; i++) {
+            document.write(arrC[i] + "&nbsp;");
+        }
+    }
+
+</script>
+</body>
+</html>
