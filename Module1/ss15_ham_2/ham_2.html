@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        h1 {
+            color: forestgreen;
+        }
+    </style>
 </head>
 <body>
 <h1>Hàm kiểm tra số nguyên tố</h1>
@@ -202,15 +207,37 @@
     }
 
     function practice_Function_2_bai_6() {
-        
+        let number = +prompt("Nhập vào đây số cần kiểm tra có phải số nguyên dương không ?");
+        if (number > 0 && number % 1 === 0) {
+            alert("true");
+        }else {
+            alert("false");
+        }
     }
 
     function practice_Function_2_bai_7() {
-
+        let number_1 = +prompt("Nhập vào số thứ nhất");
+        let number_2 = +prompt("Nhập vào số thứ hai");
+        let change;
+        change = number_1;
+        number_1 = number_2;
+        number_2 = change;
+        alert("Số thứ nhất nhất là: " + number_1);
+        alert("Số thứ nhất hai là: " + number_2);
     }
 
     function practice_Function_2_bai_8() {
-
+        let n = +prompt("số phần tử trong mảng");
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            arr[i] = +prompt("nhập phần tử thứ " + (i + 1) );
+        }
+        for (let i = 0; i < n/2; i++) {
+            let temp = arr[i];
+            arr[i] = arr[n-i-1];
+            arr[n-i-1]=temp;
+        }
+        alert("Mảng sau khi đảo ngược là : " + arr);
     }
 
     function practice_Function_2_bai_9() {
