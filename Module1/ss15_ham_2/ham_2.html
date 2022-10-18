@@ -7,15 +7,40 @@
         h1 {
             color: forestgreen;
         }
+        .chinhsua {
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+            border-color: springgreen;
+            border-width: 5px;
+        }
+        .chinhsua2 {
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+            border-color: springgreen;
+            border-width: 5px;
+        }
+        .chinhsua3 {
+            width: 130px;
+            height: 50px;
+            font-size: 20px;
+            border-color: springgreen;
+            border-width: 5px;
+        }
+
     </style>
 </head>
 <body>
+<h1  style="font-size: 50px;text-align: center">*** Bài tập hàm 2 ***</h1>
 <h1>Hàm kiểm tra số nguyên tố</h1>
- <button type="button" onclick="check_Prime_Number()">Check</button>
+<h2>Đề: kiểm tra xem một số nguyên bất kỳ có phải là số nguyên tố hay không. Sử dụng phương thức này để tìm tất cả các số nguyên tố nhỏ hơn 10000.</h2>
+ <button class="chinhsua" type="button" onclick="check_Prime_Number()">Check</button>
 <hr>
 <h1>Chuyển đổi giữa feet và meters</h1>
-<button type="button" onclick="convert_Between_Feet_To_Meters()">convert to meters</button>
-<button type="button" onclick="convert_Between_Meters_To_Feet()">convert to feet</button>
+<h2>Đề : Xây dựng hai phương thức sau - Chuyển đổi từ feet sang meters và Chuyển đổi từ meters sang feet</h2>
+<button class="chinhsua2" type="button" onclick="convert_Between_Feet_To_Meters()">convert to meters</button>
+<button class="chinhsua2" type="button" onclick="convert_Between_Meters_To_Feet()">convert to feet</button>
 
 <hr>
 <h1>Luyện tập tạo và sử dụng hàm 01</h1>
@@ -24,11 +49,11 @@
 <h2>Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.</h2>
 <h2>Bài 4: Thêm các hàm alert() vào những vị trí thích hợp trong đoạn mã sau để bạn có thể nhìn thấy giá trị của biến result trước và sau lời gọi hàm</h2>
 <h2>Bài 5: Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi sao sau: Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus. Tạo một mảng khác với bảy phần tử dạng chuỗi có giá trị là tên các chòm sao tương ứng chứa các ngôi sao: Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major và Leo. Tiếp theo, tạo một hàm nhận vào một tham số dạng chuỗi duy nhất. Trong hàm này, duyệt qua mảng thứ nhất để tìm tên ngôi sao. Nếu tìm thấy, trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai. Nói cách khác, trả lại tên chòm sao của ngôi sao đó. Trong phần body của trang web, dùng hộp thoại prompt để người dùng nhập vào tên của ngôi sao, sau đó gọi hàm với thông tin đầu vào. Đừng quên xử lý trong trường hợp không tìm thấy ngôi sao nào. Cho kết quả hiển thị trên màn hình.</h2>
-<button type="button" onclick="practice_Function_1_Bai_1()">Bài 1</button>
-<button type="button" onclick="practice_Function_1_Bai_2()">Bài 2</button>
-<button type="button" onclick="practice_Function_1_Bai_3()">Bài 3</button>
-<button type="button" onclick="practice_Function_1_Bai_4()">Bài 4</button>
-<button type="button" onclick="practice_Function_1_Bai_5()">Bài 5</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_1_Bai_1()">Bài 1</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_1_Bai_2()">Bài 2</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_1_Bai_3()">Bài 3</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_1_Bai_4()">Bài 4</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_1_Bai_5()">Bài 5</button>
 <hr>
 <h1> Luyện tập tạo và sử dụng hàm 02</h1>
 <h2>Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</h2>
@@ -40,15 +65,16 @@
 <h2>Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</h2>
 <h2>Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</h2>
 <h2>Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. </h2>
-<button type="button" onclick="practice_Function_2_bai_1()">Bài 1</button>
-<button type="button" onclick="practice_Function_2_bai_2()">Bài 2</button>
-<button type="button" onclick="practice_Function_2_bai_3()">Bài 3</button>
-<button type="button" onclick="practice_Function_2_bai_4()">Bài 4</button>
-<button type="button" onclick="practice_Function_2_bai_5()">Bài 5</button>
-<button type="button" onclick="practice_Function_2_bai_6()">Bài 6</button>
-<button type="button" onclick="practice_Function_2_bai_7()">Bài 7</button>
-<button type="button" onclick="practice_Function_2_bai_8()">Bài 8</button>
-<button type="button" onclick="practice_Function_2_bai_9()">Bài 9</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_2_Bai_1()">Bài 1</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_2_Bai_2()">Bài 2</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_2_Bai_3()">Bài 3</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_2_Bai_4()">Bài 4</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_2_Bai_5()">Bài 5</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_2_Bai_6()">Bài 6</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_2_Bai_7()">Bài 7</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_2_Bai_8()">Bài 8</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_2_Bai_9()">Bài 9</button>
+<button class="chinhsua3" type="button" onclick="practice_Function_2_Bai_Finish()">Finish</button>
 <script>
     function check_Prime_Number() {
         let number;
@@ -148,13 +174,13 @@
        alert("Tên ngôi sao và chòm sao của ca sĩ là : " + print);
     }
 
-    function practice_Function_2_bai_1() {
+    function practice_Function_2_Bai_1() {
         let number = +prompt("Nhập vào số cần tính bình phương");
         let squared = number * number;
         alert("Bình phương số vừa nhập là " + squared);
     }
 
-    function practice_Function_2_bai_2() {
+    function practice_Function_2_Bai_2() {
         let radius = +prompt("Nhập vào đây bán kính hình tròn");
         let circle_area = radius * radius * 3.14; // circle area : diện tích hình tròn
         let perimeter_of_circle = radius * 2 * 3.14; // perimeter of circle : chu vi của hình tròn
@@ -162,7 +188,7 @@
         alert("Chu vi hình tròn là : " + perimeter_of_circle);
     }
 
-    function practice_Function_2_bai_3() {
+    function practice_Function_2_Bai_3() {
         let number = +prompt("Nhập số cần tính giai thừa");
         let factorial = 1;
         for (let i = 1; i <= number ; i++) {
@@ -171,7 +197,7 @@
         alert("Giai thừa của số" + number + "!" + "là : " + factorial);
     }
 
-    function practice_Function_2_bai_4() {
+    function practice_Function_2_Bai_4() {
         let number_1 = +prompt("Nhập vào số thứ nhất");
         let number_2 = +prompt("Nhập vào số thứ hai");
         let number_3 = +prompt("Nhập vào số thứ ba");
@@ -189,7 +215,7 @@
 
     }
 
-    function practice_Function_2_bai_5() {
+    function practice_Function_2_Bai_5() {
         let number_1 = +prompt("Nhập vào số thứ nhất");
         let number_2 = +prompt("Nhập vào số thứ hai");
         let number_3 = +prompt("Nhập vào số thứ ba");
@@ -206,16 +232,16 @@
         alert("Số nhỏ nhất trong 3 số là " + min);
     }
 
-    function practice_Function_2_bai_6() {
+    function practice_Function_2_Bai_6() {
         let number = +prompt("Nhập vào đây số cần kiểm tra có phải số nguyên dương không ?");
         if (number > 0 && number % 1 === 0) {
-            alert("true");
+            alert("True");
         }else {
-            alert("false");
+            alert("False");
         }
     }
 
-    function practice_Function_2_bai_7() {
+    function practice_Function_2_Bai_7() {
         let number_1 = +prompt("Nhập vào số thứ nhất");
         let number_2 = +prompt("Nhập vào số thứ hai");
         let change;
@@ -226,11 +252,11 @@
         alert("Số thứ nhất hai là: " + number_2);
     }
 
-    function practice_Function_2_bai_8() {
-        let n = +prompt("số phần tử trong mảng");
+    function practice_Function_2_Bai_8() {
+        let n = +prompt("Số phần tử trong mảng");
         let arr = [];
         for (let i = 0; i < n; i++) {
-            arr[i] = +prompt("nhập phần tử thứ " + (i + 1) );
+            arr[i] = +prompt("Nhập phần tử thứ " + (i + 1) );
         }
         for (let i = 0; i < n/2; i++) {
             let temp = arr[i];
@@ -240,8 +266,31 @@
         alert("Mảng sau khi đảo ngược là : " + arr);
     }
 
-    function practice_Function_2_bai_9() {
+    function practice_Function_2_Bai_9() {
+        let n;
+        do {
+            n = +prompt("Nhập vào đây số phần tử trong mảng");
+        }while ( n <= 0)
+        let arr = [];
+        for (let i = 0; i < n ; i++) {
+            arr[i] = prompt("Nhập vào đây giá trị thứ " + (i +1));
+        }
+        let check = prompt("Nhập vào đây giá trị cần kiểm tra");
+        let count = 0;
+        for (let i = 0; i < arr.length ; i++) {
+            if (check === arr[i]) {
+                count ++;
+            }
+        }
+        if (count > 0) {
+            alert("Số lần xuất hiện trong mảng là : " + count);
+        }else {
+            alert("Giá trị " + check + " không xuất hiện bất cứ lần nào trong mảng");
+        }
+    }
 
+    function practice_Function_2_Bai_Finish() {
+        document.write("Bài tập của em đã kết thúc || Xin cảm ơn");
     }
 
 </script>
