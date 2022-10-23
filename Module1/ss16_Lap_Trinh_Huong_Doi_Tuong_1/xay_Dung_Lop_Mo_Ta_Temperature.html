@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class temperature{
+        constructor(c) {
+            this.c=c;
+        }
+        getCtoF(){
+            return this.c*1.8+32;
+        }
+        getCtoK(){
+            return this.c+273.15;
+        }
+    }
+    let doC = new temperature(25);
+    alert(+doC.c+" độ C  ĐỔi qua độ F ="+doC.getCtoF());
+    alert(+doC.c+" độ C  ĐỔi qua độ K ="+doC.getCtoK());
+</script>
+</body>
+</html>
