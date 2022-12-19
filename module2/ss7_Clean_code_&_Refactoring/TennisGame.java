@@ -5,7 +5,7 @@ public class TennisGame {
         if (match1Score == match2Score) {
             switch (match1Score) {
                 case 0:
-                    score = "Love-All"; 
+                    score = "Love-All";
                     break;
                 case 1:
                     score = "Fifteen-All";
