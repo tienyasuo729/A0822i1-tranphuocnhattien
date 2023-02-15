@@ -33,9 +33,11 @@ create table ChiTietPhieuXuat(
 	DGXuat int,
     SLXuat int
 );
+drop table ChiTietPhieuNhap;
 create table ChiTietPhieuNhap(
 	MaVTU varchar(45),
 	SoPN varchar(45),
+    primary key (MaVTU, SoPN),
     foreign key (MaVTU) references VatTu(MaVTU),
     foreign key (SoPN) references PhieuNhap(SoPN),
     DGNhap int,
