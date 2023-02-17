@@ -71,7 +71,7 @@ WHERE Sub.SubName = 'CF';
 
 SELECT *
 FROM Student
-WHERE StudentName LIKE "h%";
+WHERE StudentName LIKE "h%g";
 
 SELECT *
 FROM Class
@@ -82,12 +82,16 @@ FROM Subject
 where credit between 3 and 5;
 
 UPDATE  Student 
-SET ClassiD = 2
-WHERE StudentName ='Hung';
+Set Status = 0
+WHERE StudentName ='Hoa';
 SELECT *
 FROM Student;
 
 SELECT  Student.StudentName, Subject.SubName, Mark.Mark
 FROM Student , Subject , Mark
 where Student.studentid = mark.studentid and subject.subid=mark.subid
-order by mark.mark desc , StudentName
+order by mark.mark desc , StudentName;
+
+select SubName, Credit
+from Subject
+where max(Credit);
