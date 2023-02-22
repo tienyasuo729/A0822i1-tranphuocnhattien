@@ -1,4 +1,4 @@
--- create database casestudy; 
+create database casestudy; 
 use casestudy;
 
 create table vi_tri(
@@ -38,7 +38,7 @@ create table loai_khach(
 	ma_loai_khach int not null primary key,
     ten_loai_khach varchar (45)
 );
-	
+
 create table khach_hang(
 	ma_khach_hang int primary key,
     ho_ten varchar(45),
@@ -68,14 +68,14 @@ create table dich_vu(
     dien_tich int,
     chi_phi_thue double,
     so_nguoi_toi_da int,
-    ma_kieu_thue int,
-    foreign key (ma_kieu_thue) references kieu_thue(ma_kieu_thue),
-    ma_loai_dich_vu int,
-    foreign key (ma_loai_dich_vu) references loai_dich_vu (ma_loai_dich_vu),
     tieu_chuan_phong varchar(45),
     mo_ta_tien_nghi_khac varchar(45),
     dien_tich_ho_boi double,
-    so_tang int 
+    so_tang int,
+    ma_kieu_thue int,
+    foreign key (ma_kieu_thue) references kieu_thue(ma_kieu_thue),
+    ma_loai_dich_vu int,
+    foreign key (ma_loai_dich_vu) references loai_dich_vu (ma_loai_dich_vu)
     );
     
     create table hop_dong(
@@ -101,9 +101,10 @@ create table dich_vu_di_kem(
 
 create table hop_dong_chi_tiet(
 	ma_hop_dong_chi_tiet int primary key,
+	so_luong int,
     ma_hop_dong int, 	
     ma_dich_vu_di_kem int,
-    so_luong int
+    foreign key (ma_hop_dong) references hop_dong(ma_hop_dong),
+    foreign key (ma_dich_vu_di_kem) references dich_vu_di_kem(ma_dich_vu_di_kem)
 );
 
-INSERT INTO `casestudy`.`khach_hang` (`ma_khach_hang`, `ho_ten`, `ngay_sinh`, `gioi_tinh`, `so_cmnd`, `so_dien_thoai`, `email`, `dia_chi`, `ma_loai_khach`) VALUES ('1', 'Nguyễn Thị Hào', '1970-11-07', '0', '643431213', '0945423362', 'thihao07@gmail.com', '23 Nguyễn Hoàng, Đà Nẵng', '5');
