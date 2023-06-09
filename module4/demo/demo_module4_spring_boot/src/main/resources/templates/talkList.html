@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div th:replace="~{common_student::headerStudent}"></div>
+  <h1>Student Talk List </h1>
+<p style="color:blue;" th:text="${msg}"></p>
+<table border="1" style="width: 1000px">
+  <tr>
+    <th>NO</th>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>POINT</th>
+    <th>GENDER</th>
+    <th>Classroom</th>
+  </tr>
+  <tr th:each="student, loop: ${studentList}">
+    <td th:text="${loop.count}"></td>
+    <td th:text="${student.codeStudent}"></td>
+    <td th:text="${student.nameStudent}"></td>
+    <td th:text="${student.point}"></td>
+    <td>
+      <p th:if="${student.gender == 0}">Nam</p>
+      <p th:if="${student.gender == 1}">Nu</p>
+      <p th:if="${student.gender == null}">Khac</p>
+    </td>
+    <td th:text="${student.classRoom.nameClass}"></td>
+  </tr>
+</table>
+<div th:replace="~{common_student::footerStudent}"></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="~{common_student::headerStudent}"></div>
+<form action="/student/create" method="post" th:object="${studentCreateDTO}">
+    <label>Name student</label>
+    <label>
+        <input type="text" th:field="*{nameStudent}" name="nameStudent"/>
+    </label><br>
+    <p style="color: red" th:if="${#fields.hasErrors('nameStudent')}" th:errors="*{nameStudent}"></p>
+    <label>Point</label>
+    <label>
+        <input type="text" th:field="*{point}" name="point"/>
+    </label><br>
+    <p style="color: red" th:if="${#fields.hasErrors('point')}" th:errors="*{point}"></p>
+    <label>Gender</label>
+    <label>
+        <input type="radio" id="male" th:field="*{gender}" th:value="${gender[0]}"/>
+        <label for="male">Nam</label>
+        <input type="radio" id="female" th:field="*{gender}" th:value="${gender[1]}"/>
+        <label for="female">Nu</label>
+        <input type="radio" id="other" th:field="*{gender}" th:value="${gender[2]}"/>
+        <label for="other">Khac</label>
+    </label>
+    <label>Classroom</label>
+    <label>
+        <select th:field="*{classRoom}">
+            <option th:each="classRoom : ${classRooms}" th:text="${classRoom.nameClass}"
+                    th:value="${classRoom.id}"></option>
+        </select>
+    </label>
+    <br>
+    <button type="submit">Create</button>
+</form>
+<div th:replace="~{common_student::footerStudent}"></div>
+</body>
+</html>

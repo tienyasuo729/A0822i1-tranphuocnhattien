@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="~{common_student::headerStudent}"></div>
+<form action="/student/create" method="post" th:object="${student}">
+<!--    <label>Code student</label>-->
+<!--    <input type="text" th:field="*{codeStudent}" name="codeStudent"/><br>-->
+    <label>Name student</label>
+    <input type="text" th:field="*{nameStudent}" name="nameStudent"/><br>
+    <label>Point</label>
+    <input type="text" th:field="*{point}" name="point"/><br>
+    <label>Gender</label>
+    <input type="text"th:field="*{gender}" name="gender"/><br>
+    <button type="submit">Create</button>
+</form>
+<div th:replace="~{common_student::footerStudent}"></div>
+</body>
+</html>

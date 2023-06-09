@@ -1,0 +1,36 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div th:replace="~{common_student::headerStudent}"></div>
+<h1>Student List</h1>
+<p><a href="/student/create">Create Student</a></p>
+<p style="color: blue" th:text="${msg}"></p>
+<table border="1" style="width: 1000px">
+    <tr>
+        <th>No</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Point</th>
+        <th>Gender</th>
+        <th>Detail</th>
+    </tr>
+    <tr th:each="student,loop : ${listStudent}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${student.codeStudent}"></td>
+        <td th:text="${student.nameStudent}"></td>
+        <td th:text="${student.point}"></td>
+<!--        <td th:text="${student.gender}"></td>-->
+        <td>
+            <p th:if="${student.gender == 0}">Nam</p>
+            <p th:if="${student.gender == 1}">Nữ</p>
+            <p th:if="${student.gender == null}">Khác</p>
+        </td>
+        <td><a th:href="@{/student/detail/{id}(id = ${student.codeStudent})}">Detail</a></td>
+    </tr>
+</table>
+<div th:replace="~{common_student::footerStudent}"></div>
+</body>
+</html>
